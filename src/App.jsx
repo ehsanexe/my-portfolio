@@ -7,7 +7,8 @@ const profile = {
   email: "m.ehsanshafique@gmail.com",
   github: "https://github.com/ehsanexe",
   linkedin: "https://linkedin.com/in/ehsan-shafique-0a366a1b6",
-  title: "Senior Software Engineer — Frontend & Mobile",
+  title:
+    "Senior Software Engineer at Techlogix (Adalfi) | React | React Native | JavaScript | TypeScript",
   summary:
     "Software Engineer with 4+ years of experience specializing in frontend and mobile application development using React, React Native, and modern JavaScript/TypeScript frameworks. Proven ability to build scalable, high-performance applications and reusable UI components.",
 };
@@ -73,12 +74,12 @@ const skills = {
 const projects = [
   {
     title: "Episode Bookmark Manager",
-    desc: "Led componentization, performance improvements and feature rollout via feature flags.",
+    desc: "Episode Bookmark Manager is a Google Chrome extension that automates the task of bookmarking the last watched episode of your favorite shows. No more manual bookmarking and keeping track of your progress. With this extension, you can easily resume your shows right where you left off.",
     link: "https://chromewebstore.google.com/detail/episode-bookmark-manager/fbacjjfkhoipheiadbdpmokpgcofploa/related?hl=en&authuser=1&pli=1",
   },
   {
-    title: "AtlasHXM — HRM Platform",
-    desc: "Micro-frontend React platform deployed globally; improved test coverage and modularity.",
+    title: "Movie Hub",
+    desc: "React app which allows user to search movies and tv shows, deployed using firebase.",
     link: "https://movie-hub-771cb.firebaseapp.com/",
   },
 ];
@@ -185,19 +186,6 @@ export default function App() {
               </div>
             </div>
           </div>
-
-          <div className="hidden md:flex md:flex-col items-center gap-4">
-            <div className="h-44 w-44 rounded-2xl bg-gradient-to-br from-indigo-50 to-cyan-50 flex items-center justify-center border border-gray-100">
-              {/* Placeholder avatar */}
-              <div className="text-4xl font-bold text-indigo-700">ES</div>
-            </div>
-
-            <div className="text-sm text-gray-600 text-center">
-              <div className="font-medium">{profile.title}</div>
-              <div className="mt-1">{profile.phone}</div>
-              <div>{profile.email}</div>
-            </div>
-          </div>
         </section>
 
         {/* ABOUT */}
@@ -263,7 +251,7 @@ export default function App() {
                     rel="noreferrer"
                     className="text-sm font-medium hover:text-indigo-600"
                   >
-                    View on GitHub →
+                    View Project →
                   </a>
                 </div>
               </div>
