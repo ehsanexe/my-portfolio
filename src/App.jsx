@@ -89,27 +89,19 @@ export default function App() {
     <div className="min-h-screen bg-gray-900 text-gray-100 antialiased">
       <header className="bg-gray-800 shadow-sm sticky top-0 z-30">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="h-10 w-10 rounded-full bg-gradient-to-br from-indigo-600 to-cyan-400 flex items-center justify-center text-white font-semibold">
-              ES
-            </div>
-            <div>
-              <div className="font-semibold">{profile.name}</div>
-              <div className="text-xs text-gray-400">{profile.title}</div>
-            </div>
-          </div>
+          <div className="flex items-center gap-3"></div>
           <nav className="flex items-center gap-4 text-sm">
-            <a href="#about" className="hover:text-indigo-600">
-              About
-            </a>
             <a href="#work" className="hover:text-indigo-600">
-              Work
+              Experience
             </a>
             <a href="#projects" className="hover:text-indigo-600">
               Projects
             </a>
             <a href="#skills" className="hover:text-indigo-600">
               Skills
+            </a>
+            <a href="#education" className="hover:text-indigo-600">
+              Education
             </a>
             <a
               href="#contact"
@@ -162,49 +154,15 @@ export default function App() {
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
-                  <path d="M4.98 3.5a2.5 2.5 0 1 1 .001 0h-.001zM3 8.98V21h4V8.98H3zM8.5 21h4v-6.3c0-3.36 4.5-3.63 4.5 0V21h4v-7.5c0-6.72-7.5-6.47-9.5-3.16V8.98H8.5V21z" />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M22.2857 0H1.70893C0.766071 0 0 0.776786 0 1.73036V22.2696C0 23.2232 0.766071 24 1.70893 24H22.2857C23.2286 24 24 23.2232 24 22.2696V1.73036C24 0.776786 23.2286 0 22.2857 0ZM7.25357 20.5714H3.69643V9.11786H7.25893V20.5714H7.25357ZM5.475 7.55357C4.33393 7.55357 3.4125 6.62679 3.4125 5.49107C3.4125 4.35536 4.33393 3.42857 5.475 3.42857C6.61071 3.42857 7.5375 4.35536 7.5375 5.49107C7.5375 6.63214 6.61607 7.55357 5.475 7.55357ZM20.5875 20.5714H17.0304V15C17.0304 13.6714 17.0036 11.9625 15.1821 11.9625C13.3286 11.9625 13.0446 13.4089 13.0446 14.9036V20.5714H9.4875V9.11786H12.9V10.6821H12.9482C13.425 9.78214 14.5875 8.83393 16.3179 8.83393C19.9179 8.83393 20.5875 11.2071 20.5875 14.2929V20.5714Z"
+                    fill="white"
+                  />
                 </svg>
                 LinkedIn
               </a>
-
-              <a
-                href={`mailto:${profile.email}`}
-                className="inline-flex items-center gap-2 px-4 py-2 border border-gray-700 rounded-md hover:bg-gray-700"
-              >
-                Contact
-              </a>
-            </div>
-
-            <div className="mt-8 grid sm:grid-cols-2 gap-4">
-              <div className="bg-gray-800 p-4 rounded-lg shadow-sm">
-                <div className="text-xs text-gray-400">Location</div>
-                <div className="font-medium">{profile.location}</div>
-              </div>
-              <div className="bg-gray-800 p-4 rounded-lg shadow-sm">
-                <div className="text-xs text-gray-400">Availability</div>
-                <div className="font-medium">Open to new opportunities</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ABOUT */}
-        <section id="about" className="bg-gray-800 p-6 rounded-lg shadow-sm">
-          <h2 className="text-2xl font-semibold">About</h2>
-          <p className="mt-3 text-gray-300">{profile.summary}</p>
-          <div className="mt-4 grid sm:grid-cols-2 gap-4">
-            <div>
-              <h4 className="text-sm text-gray-500">Education</h4>
-              <div className="font-medium">
-                NED University — BE Software Engineering (CGPA 3.346)
-              </div>
-              <div className="text-sm text-gray-500">2016 - 2020</div>
-            </div>
-            <div>
-              <h4 className="text-sm text-gray-500">Languages</h4>
-              <div className="font-medium">
-                English (Professional), Urdu (Native)
-              </div>
             </div>
           </div>
         </section>
@@ -301,6 +259,19 @@ export default function App() {
                   </span>
                 ))}
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* EDUCATION */}
+        <section id="education">
+          <h2 className="text-2xl font-semibold mb-4">Education</h2>
+          <div className="bg-gray-800 p-6 rounded-lg shadow-sm">
+            <div>
+              <div className="font-medium">
+                NED University — BE Software Engineering (CGPA 3.346)
+              </div>
+              <div className="text-sm text-gray-500">2016 - 2020</div>
             </div>
           </div>
         </section>
