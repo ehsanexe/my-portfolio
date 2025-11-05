@@ -86,8 +86,8 @@ const projects = [
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 antialiased">
-      <header className="bg-white shadow-sm sticky top-0 z-30">
+    <div className="min-h-screen bg-gray-900 text-gray-100 antialiased">
+      <header className="bg-gray-800 shadow-sm sticky top-0 z-30">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 rounded-full bg-gradient-to-br from-indigo-600 to-cyan-400 flex items-center justify-center text-white font-semibold">
@@ -95,7 +95,7 @@ export default function App() {
             </div>
             <div>
               <div className="font-semibold">{profile.name}</div>
-              <div className="text-xs text-gray-500">{profile.title}</div>
+              <div className="text-xs text-gray-400">{profile.title}</div>
             </div>
           </div>
           <nav className="flex items-center gap-4 text-sm">
@@ -128,7 +128,7 @@ export default function App() {
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
               {profile.name}
             </h1>
-            <p className="mt-3 text-lg text-gray-700 max-w-2xl">
+            <p className="mt-3 text-lg text-gray-300 max-w-2xl">
               {profile.summary}
             </p>
 
@@ -137,7 +137,7 @@ export default function App() {
                 href={profile.github}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 border rounded-md hover:bg-gray-100"
+                className="inline-flex items-center gap-2 px-4 py-2 border border-gray-700 rounded-md hover:bg-gray-700"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -154,7 +154,7 @@ export default function App() {
                 href={profile.linkedin}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 border rounded-md hover:bg-gray-100"
+                className="inline-flex items-center gap-2 px-4 py-2 border border-gray-700 rounded-md hover:bg-gray-700"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -169,19 +169,19 @@ export default function App() {
 
               <a
                 href={`mailto:${profile.email}`}
-                className="inline-flex items-center gap-2 px-4 py-2 border rounded-md hover:bg-gray-100"
+                className="inline-flex items-center gap-2 px-4 py-2 border border-gray-700 rounded-md hover:bg-gray-700"
               >
                 Contact
               </a>
             </div>
 
             <div className="mt-8 grid sm:grid-cols-2 gap-4">
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <div className="text-xs text-gray-500">Location</div>
+              <div className="bg-gray-800 p-4 rounded-lg shadow-sm">
+                <div className="text-xs text-gray-400">Location</div>
                 <div className="font-medium">{profile.location}</div>
               </div>
-              <div className="bg-white p-4 rounded-lg shadow-sm">
-                <div className="text-xs text-gray-500">Availability</div>
+              <div className="bg-gray-800 p-4 rounded-lg shadow-sm">
+                <div className="text-xs text-gray-400">Availability</div>
                 <div className="font-medium">Open to new opportunities</div>
               </div>
             </div>
@@ -189,9 +189,9 @@ export default function App() {
         </section>
 
         {/* ABOUT */}
-        <section id="about" className="bg-white p-6 rounded-lg shadow-sm">
+        <section id="about" className="bg-gray-800 p-6 rounded-lg shadow-sm">
           <h2 className="text-2xl font-semibold">About</h2>
-          <p className="mt-3 text-gray-700">{profile.summary}</p>
+          <p className="mt-3 text-gray-300">{profile.summary}</p>
           <div className="mt-4 grid sm:grid-cols-2 gap-4">
             <div>
               <h4 className="text-sm text-gray-500">Education</h4>
@@ -214,14 +214,14 @@ export default function App() {
           <h2 className="text-2xl font-semibold mb-4">Work Experience</h2>
           <div className="space-y-4">
             {experience.map((job, i) => (
-              <article key={i} className="bg-white p-5 rounded-lg shadow-sm">
+              <article key={i} className="bg-gray-800 p-5 rounded-lg shadow-sm">
                 <div className="flex items-start justify-between">
                   <div>
                     <h3 className="font-semibold">{job.role}</h3>
-                    <div className="text-sm text-gray-500">{job.period}</div>
+                    <div className="text-sm text-gray-400">{job.period}</div>
                   </div>
                 </div>
-                <ul className="mt-3 list-disc list-inside text-gray-700 space-y-1">
+                <ul className="mt-3 list-disc list-inside text-gray-300 space-y-1">
                   {job.bullets.map((b, idx) => (
                     <li key={idx}>{b}</li>
                   ))}
@@ -238,18 +238,18 @@ export default function App() {
             {projects.map((p, i) => (
               <div
                 key={i}
-                className="bg-white p-4 rounded-lg shadow-sm flex flex-col justify-between"
+                className="bg-gray-800 p-4 rounded-lg shadow-sm flex flex-col justify-between"
               >
                 <div>
                   <h4 className="font-semibold">{p.title}</h4>
-                  <p className="mt-2 text-sm text-gray-600">{p.desc}</p>
+                  <p className="mt-2 text-sm text-gray-400">{p.desc}</p>
                 </div>
                 <div className="mt-4">
                   <a
                     href={p.link}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-sm font-medium hover:text-indigo-600"
+                    className="text-sm font-medium hover:text-indigo-400"
                   >
                     View Project →
                   </a>
@@ -260,16 +260,16 @@ export default function App() {
         </section>
 
         {/* SKILLS */}
-        <section id="skills" className="bg-white p-6 rounded-lg shadow-sm">
+        <section id="skills" className="bg-gray-800 p-6 rounded-lg shadow-sm">
           <h2 className="text-2xl font-semibold">Skills</h2>
           <div className="mt-4 grid sm:grid-cols-3 gap-4">
             <div>
-              <h4 className="text-sm text-gray-500">Languages</h4>
+              <h4 className="text-sm text-gray-400">Languages</h4>
               <div className="mt-2 flex flex-wrap gap-2">
                 {skills.languages.map((s) => (
                   <span
                     key={s}
-                    className="text-xs px-2 py-1 bg-indigo-50 rounded-md"
+                    className="text-xs px-2 py-1 bg-indigo-900 text-indigo-100 rounded-md"
                   >
                     {s}
                   </span>
@@ -277,12 +277,12 @@ export default function App() {
               </div>
             </div>
             <div>
-              <h4 className="text-sm text-gray-500">Frameworks & Libraries</h4>
+              <h4 className="text-sm text-gray-400">Frameworks & Libraries</h4>
               <div className="mt-2 flex flex-wrap gap-2">
                 {skills.frameworks.map((s) => (
                   <span
                     key={s}
-                    className="text-xs px-2 py-1 bg-rose-50 rounded-md"
+                    className="text-xs px-2 py-1 bg-rose-900 text-rose-100 rounded-md"
                   >
                     {s}
                   </span>
@@ -290,12 +290,12 @@ export default function App() {
               </div>
             </div>
             <div>
-              <h4 className="text-sm text-gray-500">Tools</h4>
+              <h4 className="text-sm text-gray-400">Tools</h4>
               <div className="mt-2 flex flex-wrap gap-2">
                 {skills.tools.map((s) => (
                   <span
                     key={s}
-                    className="text-xs px-2 py-1 bg-green-50 rounded-md"
+                    className="text-xs px-2 py-1 bg-green-900 text-green-100 rounded-md"
                   >
                     {s}
                   </span>
@@ -306,28 +306,33 @@ export default function App() {
         </section>
 
         {/* CONTACT */}
-        <section id="contact" className="bg-white p-6 rounded-lg shadow-sm">
+        <section id="contact" className="bg-gray-800 p-6 rounded-lg shadow-sm">
           <h2 className="text-2xl font-semibold">Contact</h2>
-          <p className="mt-3 text-gray-700">
+          <p className="mt-3 text-gray-300">
             I usually respond within 24–48 hours. For quick contact, email me or
             connect on LinkedIn.
           </p>
 
           <div className="mt-4 grid sm:grid-cols-2 gap-4">
-            <div className="p-4 rounded-md bg-gray-50">
-              <div className="text-sm text-gray-500">Email</div>
-              <a href={`mailto:${profile.email}`} className="block font-medium">
+            <div className="p-4 rounded-md bg-gray-800">
+              <div className="text-sm text-gray-400">Email</div>
+              <a
+                href={`mailto:${profile.email}`}
+                className="block font-medium text-gray-100"
+              >
                 {profile.email}
               </a>
 
-              <div className="mt-3 text-sm text-gray-500">Phone</div>
-              <div className="font-medium">{profile.phone}</div>
+              <div className="mt-3 text-sm text-gray-400">Phone</div>
+              <div className="font-medium text-gray-100">{profile.phone}</div>
 
-              <div className="mt-3 text-sm text-gray-500">Location</div>
-              <div className="font-medium">{profile.location}</div>
+              <div className="mt-3 text-sm text-gray-400">Location</div>
+              <div className="font-medium text-gray-100">
+                {profile.location}
+              </div>
             </div>
 
-            <div className="p-4 rounded-md bg-gray-50 flex flex-col justify-between">
+            <div className="p-4 rounded-md bg-gray-800 flex flex-col justify-between">
               <form
                 action={`mailto:${profile.email}`}
                 method="GET"
@@ -337,13 +342,13 @@ export default function App() {
                 <input
                   name="subject"
                   placeholder="Subject"
-                  className="w-full border rounded-md px-3 py-2"
+                  className="w-full border border-gray-700 rounded-md px-3 py-2 bg-gray-900 text-gray-100"
                 />
                 <textarea
                   name="body"
                   rows={4}
                   placeholder="Message"
-                  className="w-full border rounded-md px-3 py-2"
+                  className="w-full border border-gray-700 rounded-md px-3 py-2 bg-gray-900 text-gray-100"
                 />
                 <button
                   type="submit"
@@ -377,7 +382,7 @@ export default function App() {
           </div>
         </section>
 
-        <footer className="text-center text-sm text-gray-500 py-6">
+        <footer className="text-center text-sm text-gray-400 py-6">
           © {new Date().getFullYear()} {profile.name} — Built with React +
           Tailwind
         </footer>

@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fallback for very early paint before React mounts */
+html,
+body,
+#root {
+  height: 100%;
+  background-color: #0f172a; /* tailwind gray-900 */
+  color: #f8fafc; /* tailwind gray-100 */
+}
+
+/* Improve font rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
