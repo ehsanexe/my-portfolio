@@ -87,35 +87,50 @@ const projects = [
 export default function App() {
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100 antialiased">
-      <header className="bg-gray-800 shadow-sm sticky top-0 z-30">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3"></div>
-          <nav className="flex items-center gap-4 text-sm">
-            <a href="#work" className="hover:text-indigo-600">
-              Experience
-            </a>
-            <a href="#projects" className="hover:text-indigo-600">
-              Projects
-            </a>
-            <a href="#skills" className="hover:text-indigo-600">
-              Skills
-            </a>
-            <a href="#education" className="hover:text-indigo-600">
-              Education
-            </a>
-            <a
-              href="#contact"
-              className="px-3 py-1 rounded-md bg-indigo-600 text-white text-sm hover:opacity-95"
-            >
-              Contact
-            </a>
-          </nav>
-        </div>
+      <header className="max-md:hidden fixed top-4 right-4 z-30">
+        <nav className="flex flex-col gap-3">
+          <a
+            href="#about"
+            className="px-3 py-2 text-sm hover:text-indigo-400 hover:bg-gray-700 rounded-md transition-colors"
+          >
+            --- About Me
+          </a>
+          <a
+            href="#work"
+            className="px-3 py-2 text-sm hover:text-indigo-400 hover:bg-gray-700 rounded-md transition-colors"
+          >
+            --- Experience
+          </a>
+          <a
+            href="#projects"
+            className="px-3 py-2 text-sm hover:text-indigo-400 hover:bg-gray-700 rounded-md transition-colors"
+          >
+            --- Projects
+          </a>
+          <a
+            href="#skills"
+            className="px-3 py-2 text-sm hover:text-indigo-400 hover:bg-gray-700 rounded-md transition-colors"
+          >
+            --- Skills
+          </a>
+          <a
+            href="#education"
+            className="px-3 py-2 text-sm hover:text-indigo-400 hover:bg-gray-700 rounded-md transition-colors"
+          >
+            --- Education
+          </a>
+          <a
+            href="#contact"
+            className="px-3 py-2 text-sm hover:text-indigo-400 hover:bg-gray-700 rounded-md transition-colors"
+          >
+            --- Contact
+          </a>
+        </nav>
       </header>
 
       <main className="max-w-6xl mx-auto px-6 py-12 grid gap-12">
         {/* HERO */}
-        <section className="grid md:grid-cols-3 gap-8 items-center">
+        <section id="about" className="grid md:grid-cols-3 gap-8 items-center">
           <div className="md:col-span-2">
             <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
               {profile.name}
