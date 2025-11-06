@@ -186,22 +186,53 @@ export default function App() {
 
         {/* WORK */}
         <section id="work">
-          <h2 className="text-2xl font-semibold mb-4">Work Experience</h2>
-          <div className="space-y-4">
+          <h2 className="text-2xl font-semibold mb-8">Work Experience</h2>
+          <div className="relative">
+            {/* Timeline line */}
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 opacity-60"></div>
+            
             {experience.map((job, i) => (
-              <article key={i} className="bg-gray-800 p-5 rounded-lg shadow-sm">
-                <div className="flex items-start justify-between">
-                  <div>
-                    <h3 className="font-semibold">{job.role}</h3>
-                    <div className="text-sm text-gray-400">{job.period}</div>
-                  </div>
+              <div key={i} className="relative mb-8 last:mb-0">
+                {/* Timeline connector line extending into card */}
+                <div className="absolute left-8 top-6 w-8 h-0.5 bg-gradient-to-r from-indigo-500 to-transparent"></div>
+                
+                {/* Timeline dot - positioned to intersect with card */}
+                <div className="absolute left-8 top-4 -ml-2 w-4 h-4 bg-indigo-500 rounded-full border-2 border-gray-900 z-20 shadow-lg">
+                  <div className="absolute inset-0.5 bg-white rounded-full"></div>
                 </div>
-                <ul className="mt-3 list-disc list-inside text-gray-300 space-y-1">
-                  {job.bullets.map((b, idx) => (
-                    <li key={idx}>{b}</li>
-                  ))}
-                </ul>
-              </article>
+                
+                {/* Content Card */}
+                <div className="ml-20 relative">
+                  <article className="bg-gradient-to-br from-gray-800 to-gray-850 p-6 rounded-xl shadow-xl border-l-4 border-indigo-500 hover:shadow-2xl hover:border-l-purple-500 transition-all duration-300 transform hover:-translate-y-1">
+                    {/* Timeline integration visual cue */}
+                    <div className="absolute -left-2 top-4 w-4 h-4 bg-indigo-500 rounded-full opacity-30"></div>
+                    
+                    {/* Period badge */}
+                    <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-medium bg-gradient-to-r from-indigo-900 to-purple-900 text-indigo-100 rounded-full mb-4 shadow-md">
+                      <div className="w-2 h-2 bg-current rounded-full animate-pulse"></div>
+                      {job.period}
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-white mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                      {job.role}
+                    </h3>
+                    
+                    <ul className="space-y-3">
+                      {job.bullets.map((bullet, idx) => (
+                        <li key={idx} className="flex items-start text-gray-300 text-sm leading-relaxed">
+                          <div className="flex-shrink-0 w-2 h-2 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full mt-2 mr-3 shadow-sm"></div>
+                          <span className="hover:text-gray-200 transition-colors duration-200">{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    {/* Subtle card number indicator */}
+                    <div className="absolute top-2 right-3 text-xs text-gray-600 font-mono">
+                      {String(i + 1).padStart(2, '0')}
+                    </div>
+                  </article>
+                </div>
+              </div>
             ))}
           </div>
         </section>
