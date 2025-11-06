@@ -316,7 +316,7 @@ export default function App() {
 
         {/* PROJECTS */}
         <section id="projects">
-          <h2 className="text-2xl font-semibold mb-8">Selected Projects</h2>
+          <h2 className="text-2xl font-semibold mb-8">Projects</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {projects.map((p, i) => (
               <div
@@ -373,7 +373,6 @@ export default function App() {
             <h2 className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
               Skills
             </h2>
-            <div className="text-xs text-gray-600 font-mono">03</div>
           </div>
           <div className="grid sm:grid-cols-3 gap-6">
             <div className="space-y-3">
@@ -424,12 +423,6 @@ export default function App() {
         <section id="education">
           <h2 className="text-2xl font-semibold mb-8">Education</h2>
           <div className="bg-gradient-to-br from-gray-800/80 to-gray-850/80 backdrop-blur-sm p-8 rounded-xl shadow-xl border border-gray-700/50 hover:shadow-2xl hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-1 group">
-            <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center gap-3">
-                <div className="w-3 h-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full animate-pulse"></div>
-                <div className="text-xs text-gray-600 font-mono">04</div>
-              </div>
-            </div>
             <div>
               <div className="text-lg font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-2">
                 NED University — BE Software Engineering
@@ -451,7 +444,6 @@ export default function App() {
             <h2 className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
               Contact
             </h2>
-            <div className="text-xs text-gray-600 font-mono">05</div>
           </div>
           <p className="text-gray-300 mb-8 leading-relaxed">
             I usually respond within 24–48 hours. For quick contact, email me or
