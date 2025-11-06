@@ -239,25 +239,37 @@ export default function App() {
 
         {/* PROJECTS */}
         <section id="projects">
-          <h2 className="text-2xl font-semibold mb-4">Selected Projects</h2>
-          <div className="grid md:grid-cols-3 gap-4">
+          <h2 className="text-2xl font-semibold mb-8">Selected Projects</h2>
+          <div className="grid md:grid-cols-2 gap-6">
             {projects.map((p, i) => (
               <div
                 key={i}
-                className="bg-gray-800 p-4 rounded-lg shadow-sm flex flex-col justify-between"
+                className="bg-gradient-to-br from-gray-800/80 to-gray-850/80 backdrop-blur-sm p-6 rounded-xl shadow-xl border border-gray-700/50 hover:shadow-2xl hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-2 flex flex-col justify-between group"
               >
                 <div>
-                  <h4 className="font-semibold">{p.title}</h4>
-                  <p className="mt-2 text-sm text-gray-400">{p.desc}</p>
+                  <div className="flex items-center justify-between mb-3">
+                    <h4 className="text-lg font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                      {p.title}
+                    </h4>
+                    <div className="text-xs text-gray-600 font-mono">
+                      {String(i + 1).padStart(2, '0')}
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-300 leading-relaxed hover:text-gray-200 transition-colors duration-200">
+                    {p.desc}
+                  </p>
                 </div>
-                <div className="mt-4">
+                <div className="mt-6 pt-4 border-t border-gray-700/50">
                   <a
                     href={p.link}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-sm font-medium hover:text-indigo-400"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-indigo-400 hover:text-purple-400 transition-colors duration-200 group-hover:translate-x-1 transform"
                   >
-                    View Project →
+                    View Project 
+                    <svg className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
                   </a>
                 </div>
               </div>
@@ -266,42 +278,45 @@ export default function App() {
         </section>
 
         {/* SKILLS */}
-        <section id="skills" className="bg-gray-800 p-6 rounded-lg shadow-sm">
-          <h2 className="text-2xl font-semibold">Skills</h2>
-          <div className="mt-4 grid sm:grid-cols-3 gap-4">
-            <div>
-              <h4 className="text-sm text-gray-400">Languages</h4>
-              <div className="mt-2 flex flex-wrap gap-2">
+        <section id="skills" className="bg-gradient-to-br from-gray-800/80 to-gray-850/80 backdrop-blur-sm p-8 rounded-xl shadow-xl border border-gray-700/50 hover:shadow-2xl hover:border-indigo-500/50 transition-all duration-300 transform hover:-translate-y-1 group">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Skills</h2>
+            <div className="text-xs text-gray-600 font-mono">03</div>
+          </div>
+          <div className="grid sm:grid-cols-3 gap-6">
+            <div className="space-y-3">
+              <h4 className="text-sm font-medium text-indigo-300">Languages</h4>
+              <div className="flex flex-wrap gap-2">
                 {skills.languages.map((s) => (
                   <span
                     key={s}
-                    className="text-xs px-2 py-1 bg-indigo-900 text-indigo-100 rounded-md"
+                    className="text-xs px-3 py-1.5 bg-gradient-to-r from-indigo-900/80 to-indigo-800/80 text-indigo-100 rounded-full hover:from-indigo-800 hover:to-indigo-700 transition-all duration-200 hover:scale-105 cursor-default border border-indigo-700/50"
                   >
                     {s}
                   </span>
                 ))}
               </div>
             </div>
-            <div>
-              <h4 className="text-sm text-gray-400">Frameworks & Libraries</h4>
-              <div className="mt-2 flex flex-wrap gap-2">
+            <div className="space-y-3">
+              <h4 className="text-sm font-medium text-rose-300">Frameworks & Libraries</h4>
+              <div className="flex flex-wrap gap-2">
                 {skills.frameworks.map((s) => (
                   <span
                     key={s}
-                    className="text-xs px-2 py-1 bg-rose-900 text-rose-100 rounded-md"
+                    className="text-xs px-3 py-1.5 bg-gradient-to-r from-rose-900/80 to-rose-800/80 text-rose-100 rounded-full hover:from-rose-800 hover:to-rose-700 transition-all duration-200 hover:scale-105 cursor-default border border-rose-700/50"
                   >
                     {s}
                   </span>
                 ))}
               </div>
             </div>
-            <div>
-              <h4 className="text-sm text-gray-400">Tools</h4>
-              <div className="mt-2 flex flex-wrap gap-2">
+            <div className="space-y-3">
+              <h4 className="text-sm font-medium text-green-300">Tools</h4>
+              <div className="flex flex-wrap gap-2">
                 {skills.tools.map((s) => (
                   <span
                     key={s}
-                    className="text-xs px-2 py-1 bg-green-900 text-green-100 rounded-md"
+                    className="text-xs px-3 py-1.5 bg-gradient-to-r from-green-900/80 to-green-800/80 text-green-100 rounded-full hover:from-green-800 hover:to-green-700 transition-all duration-200 hover:scale-105 cursor-default border border-green-700/50"
                   >
                     {s}
                   </span>
@@ -313,73 +328,91 @@ export default function App() {
 
         {/* EDUCATION */}
         <section id="education">
-          <h2 className="text-2xl font-semibold mb-4">Education</h2>
-          <div className="bg-gray-800 p-6 rounded-lg shadow-sm">
-            <div>
-              <div className="font-medium">
-                NED University — BE Software Engineering (CGPA 3.346)
+          <h2 className="text-2xl font-semibold mb-8">Education</h2>
+          <div className="bg-gradient-to-br from-gray-800/80 to-gray-850/80 backdrop-blur-sm p-8 rounded-xl shadow-xl border border-gray-700/50 hover:shadow-2xl hover:border-purple-500/50 transition-all duration-300 transform hover:-translate-y-1 group">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-3">
+                <div className="w-3 h-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full animate-pulse"></div>
+                <div className="text-xs text-gray-600 font-mono">04</div>
               </div>
-              <div className="text-sm text-gray-500">2016 - 2020</div>
+            </div>
+            <div>
+              <div className="text-lg font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent mb-2">
+                NED University — BE Software Engineering
+              </div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 text-sm bg-gradient-to-r from-purple-900/80 to-indigo-900/80 text-purple-100 rounded-full border border-purple-700/50">
+                <div className="w-2 h-2 bg-current rounded-full"></div>
+                2016 - 2020 • CGPA 3.346
+              </div>
             </div>
           </div>
         </section>
 
         {/* CONTACT */}
-        <section id="contact" className="bg-gray-800 p-6 rounded-lg shadow-sm">
-          <h2 className="text-2xl font-semibold">Contact</h2>
-          <p className="mt-3 text-gray-300">
+        <section id="contact" className="bg-gradient-to-br from-gray-800/80 to-gray-850/80 backdrop-blur-sm p-8 rounded-xl shadow-xl border border-gray-700/50 hover:shadow-2xl hover:border-blue-500/50 transition-all duration-300 transform hover:-translate-y-1 group">
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Contact</h2>
+            <div className="text-xs text-gray-600 font-mono">05</div>
+          </div>
+          <p className="text-gray-300 mb-8 leading-relaxed">
             I usually respond within 24–48 hours. For quick contact, email me or
             connect on LinkedIn.
           </p>
 
-          <div className="mt-4 grid sm:grid-cols-2 gap-4">
-            <div className="p-4 rounded-md bg-gray-800">
-              <div className="text-sm text-gray-400">Email</div>
-              <a
-                href={`mailto:${profile.email}`}
-                className="block font-medium text-gray-100"
-              >
-                {profile.email}
-              </a>
+          <div className="grid sm:grid-cols-2 gap-6">
+            <div className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-sm p-6 rounded-xl border border-gray-700/30 hover:border-gray-600/50 transition-all duration-200 space-y-4">
+              <div className="space-y-2">
+                <div className="text-sm font-medium text-blue-300">Email</div>
+                <a
+                  href={`mailto:${profile.email}`}
+                  className="block font-medium text-gray-100 hover:text-blue-400 transition-colors duration-200"
+                >
+                  {profile.email}
+                </a>
+              </div>
 
-              <div className="mt-3 text-sm text-gray-400">Phone</div>
-              <div className="font-medium text-gray-100">{profile.phone}</div>
+              <div className="space-y-2">
+                <div className="text-sm font-medium text-blue-300">Phone</div>
+                <div className="font-medium text-gray-100">{profile.phone}</div>
+              </div>
 
-              <div className="mt-3 text-sm text-gray-400">Location</div>
-              <div className="font-medium text-gray-100">
-                {profile.location}
+              <div className="space-y-2">
+                <div className="text-sm font-medium text-blue-300">Location</div>
+                <div className="font-medium text-gray-100">
+                  {profile.location}
+                </div>
               </div>
             </div>
 
-            <div className="p-4 rounded-md bg-gray-800 flex flex-col justify-between">
+            <div className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-sm p-6 rounded-xl border border-gray-700/30 hover:border-gray-600/50 transition-all duration-200 flex flex-col justify-between">
               <form
                 action={`mailto:${profile.email}`}
                 method="GET"
                 encType="text/plain"
-                className="space-y-3"
+                className="space-y-4"
               >
                 <input
                   name="subject"
                   placeholder="Subject"
-                  className="w-full border border-gray-700 rounded-md px-3 py-2 bg-gray-900 text-gray-100"
+                  className="w-full border border-gray-600/50 rounded-lg px-4 py-3 bg-gray-900/50 text-gray-100 focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/25 transition-all duration-200 backdrop-blur-sm"
                 />
                 <textarea
                   name="body"
                   rows={4}
                   placeholder="Message"
-                  className="w-full border border-gray-700 rounded-md px-3 py-2 bg-gray-900 text-gray-100"
+                  className="w-full border border-gray-600/50 rounded-lg px-4 py-3 bg-gray-900/50 text-gray-100 focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/25 transition-all duration-200 backdrop-blur-sm resize-none"
                 />
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-indigo-600 text-white rounded-md"
+                  className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-500 hover:to-blue-600 transition-all duration-200 transform hover:scale-[1.02] shadow-lg hover:shadow-blue-500/25"
                 >
-                  Send
+                  Send Message
                 </button>
               </form>
-              <div className="mt-4 text-xs text-gray-400">
+              <div className="mt-6 text-xs text-gray-400 text-center">
                 Or connect on{" "}
                 <a
-                  className="underline"
+                  className="text-blue-400 hover:text-blue-300 transition-colors duration-200 underline"
                   href={profile.linkedin}
                   target="_blank"
                   rel="noreferrer"
@@ -388,7 +421,7 @@ export default function App() {
                 </a>{" "}
                 /{" "}
                 <a
-                  className="underline"
+                  className="text-blue-400 hover:text-blue-300 transition-colors duration-200 underline"
                   href={profile.github}
                   target="_blank"
                   rel="noreferrer"
