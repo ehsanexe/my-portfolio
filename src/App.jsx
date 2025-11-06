@@ -1,4 +1,5 @@
 import React from "react";
+import BackgroundBubbles from "./components/BackgroundBubbles";
 
 const profile = {
   name: "Muhammad Ehsan Shafique",
@@ -86,8 +87,9 @@ const projects = [
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100 antialiased">
-      <header className="max-md:hidden fixed top-4 right-4 z-30">
+    <div className="min-h-screen bg-gray-900 text-gray-100 antialiased relative">
+      <BackgroundBubbles />
+      <header className="max-md:hidden fixed top-4 right-4 z-40">
         <nav className="flex flex-col gap-3">
           <a
             href="#about"
@@ -128,7 +130,7 @@ export default function App() {
         </nav>
       </header>
 
-      <main className="max-w-6xl mx-auto px-6 py-12 grid gap-12">
+      <main className="max-w-6xl mx-auto px-6 py-12 grid gap-12 relative z-10">
         {/* HERO */}
         <section id="about" className="grid md:grid-cols-3 gap-8 items-center">
           <div className="md:col-span-2">
