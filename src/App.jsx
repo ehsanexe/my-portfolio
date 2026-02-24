@@ -9,44 +9,52 @@ const profile = {
   github: "https://github.com/ehsanexe",
   linkedin: "https://linkedin.com/in/ehsan-shafique-0a366a1b6",
   title:
-    "Senior Software Engineer at Techlogix (Adalfi) | React | React Native | JavaScript | TypeScript",
+    "Principal Software Engineer at Techlogix (Adalfi) | React | React Native | JavaScript | TypeScript",
   summary:
-    "Software Engineer with 4+ years of experience specializing in frontend and mobile application development using React, React Native, and modern JavaScript/TypeScript frameworks. Proven ability to build scalable, high-performance applications and reusable UI components.",
+    "Principal Software Engineer with over 5 years of expertise in architecting scalable frontend and mobile solutions using React, React Native, and TypeScript. Highly versatile professional, equally effective as an autonomous solo contributor and a strategic team lead for high-performing engineering squads. Proven track record of refactoring complex legacy systems and delivering enterprise-grade fintech and HRM platforms globally. Expert in building reusable UI libraries, optimizing performance through Micro Frontend architecture, and institutionalizing high-quality code standards with 80%+ test coverage.",
 };
 
 const experience = [
   {
-    role: "Senior Software Engineer — Techlogix (Adalfi)",
-    period: "Mar 2025 – Present",
+    role: "Principal Software Engineer — Techlogix (Adalfi)",
+    period: "July 2025 – Present",
     bullets: [
-      "Lead a team of 5+ engineers to develop and maintain the Adalfi Portal (fintech).",
-      "Refactored legacy codebase reducing technical debt by 30%.",
-      "Designed and implemented v2 of 15+ reusable UI components.",
+      "Designed and implemented a dynamic reporting framework that transforms structured API responses into fully rendered tables and configurable filters, reducing new report development time by 70%.",
+      "Developed a comprehensive KPI Dashboard for the Adalfi portal, authored optimized SQL Stored Procedures to aggregate backend data for real-time performance tracking.",
+    ],
+  },
+  {
+    role: "Senior Software Engineer — Techlogix (Adalfi)",
+    period: "Mar 2025 – June 2025",
+    bullets: [
+      "Lead a cross-functional team of 5+ engineers, overseeing the development of the Adalfi Portal and mentoring junior developers to ensure high-quality delivery.",
+      "Revamped a complex legacy codebase and engineered the V2 version of 15+ core components, which reduced technical debt by 30% and significantly enhanced system stability.",
     ],
   },
   {
     role: "Senior Software Engineer — Techlogix (AtlasHXM)",
     period: "Jul 2023 – Feb 2025",
     bullets: [
-      "Achieved 80%+ unit test coverage using Jest.",
-      "Integrated 100+ feature flags for controlled feature releases.",
-      "Built and maintained 15+ reusable UI components.",
+      "Institutionalized a culture of software quality by implementing a rigorous testing strategy with Jest, consistently maintaining 80%+ unit test coverage and reducing production regressions by 30%.",
+      "Architected a centralized UI Design System using Storybook, establishing a single source of truth that accelerated frontend delivery cycles by 40% and ensured 90% design consistency across all product modules.",
+      "Led localization implementation using locize integrated with i18next, delivering production-ready English and Chinese support with dynamic content translation and streamlined translation management workflows.",
     ],
   },
   {
     role: "Software Engineer — Techlogix (AtlasHXM)",
     period: "Mar 2022 – Jun 2023",
     bullets: [
-      "Developed and maintained a React-based HRM platform deployed in 160+ countries.",
-      "Collaborated with a distributed team of 60+ engineers using micro-frontend architecture.",
+      "Engineered invoicing reporting module within a Micro Frontend architecture for a global HRM platform (AtlasHXM) deployed in 160+ countries.",
+      "Integrated 100+ feature flags for controlled feature releases.",
     ],
   },
   {
     role: "React Native Developer — Technomites",
     period: "Dec 2020 – Feb 2022",
     bullets: [
-      "Delivered 8+ high-performance mobile apps for iOS and Android.",
-      "Led 20+ app releases to Apple App Store and Google Play Store.",
+      "Successfully delivered 8+ high-performance mobile applications for e-commerce and service sectors on both iOS and Android.",
+      "Enhanced user engagement and utility by integrating Google Maps SDK for location services and Firebase Cloud Messaging (FCM) for real-time push notifications.",
+      "Architected and implemented i18n-based localization in React Native apps using i18next, enabling seamless multi-language support, RTL handling, and dynamic content translation across iOS and Android platforms.",
     ],
   },
   {
